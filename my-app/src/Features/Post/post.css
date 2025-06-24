@@ -1,0 +1,36 @@
+:root {
+  --primary-main-color: #FFA500; 
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 0.5rem;
+
+  background-color: var(--primary-main-color); 
+  border-radius: 0.5rem;
+}
+
+.post-owner-name {
+  text-align: center;
+}
+
+.post-text {
+  text-align: center;
+}
+
+.comments-section {
+  display: flex;
+  justify-content: center;
+}
+
+.post-footer {
+  margin-top: auto; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-date {
+  text-align: center;
+}
