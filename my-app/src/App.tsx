@@ -5,7 +5,7 @@ import Post from './Features/Post/Post';
 function App() {
   return (
     <Box className="app-container">
-      <Post postText='this is my first post' postOwnerName='roei' comments={[{commentAuthor: 'roei', commentText:'amazing'}, {commentAuthor: 'bar', commentText:'wow!'}, {commentAuthor: 'maor', commentText:'beautiful'}]} amountOfLikes={5}></Post>
+      <Post text='this is my first post' ownerName='roei' comments={[{commentAuthor: 'roei', commentText:'amazing'}, {commentAuthor: 'bar', commentText:'wow!'}, {commentAuthor: 'maor', commentText:'beautiful'}]} amountOfLikes={5}></Post>
     </Box>
   );
 }

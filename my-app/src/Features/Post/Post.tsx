@@ -3,33 +3,33 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Comments from './Comments/Comments';
 import Likes from './Likes/Likes';
-import { PostComment } from './Comments/type';
+import { Comment } from './Comments/type';
 import './post.css';
+import { getDate } from '../../Common/utils'
 
 interface Props {
-  comments: PostComment[];
+  comments: Comment[];
   amountOfLikes: number;
-  postText: string;
-  postOwnerName: string;
+  text: string;
+  ownerName: string;
 }
 
-const Post: FC<Props> = ({ postText, postOwnerName, comments, amountOfLikes }) => {
-  const date = new Date().toLocaleDateString();
+const Post: FC<Props> = ({ text, ownerName, comments, amountOfLikes }) => {
 
   return (
     <Box className="post-container">
       <Typography variant="h3" className="post-owner-name">
-        {postOwnerName}'s Post
+        {ownerName}'s Post
       </Typography>
       <Typography className="post-text">
-        {postText}
+        {text}
       </Typography>
       <Box className="comments-section">
         <Comments comments={comments} />
       </Box>
       <Box className="post-footer">
         <Typography className="post-date">
-          {date}
+          {getDate()}
         </Typography>
         <Likes amountOfLikes={amountOfLikes} />
       </Box>

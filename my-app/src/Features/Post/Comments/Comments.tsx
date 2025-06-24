@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
 import {Avatar, ListItemAvatar, ListItemText, ListItem, List, Box}  from '@mui/material';
 import CommentIcon from '@mui/icons-material/Comment';
-import { PostComment } from './type';
+import { Comment } from './type';
 import './comments.css';
 
 interface Props {
-  comments: PostComment[];
+  comments: Comment[];
 }
 
 const Comments: FC<Props> = ({ comments }) => {
   return (
     <Box className="comments-container">
-      <List className="comments-list">
+      <List>
         {comments.map((comment, index) => (
           <ListItem key={index} className="comment-item">
             <ListItemAvatar >
