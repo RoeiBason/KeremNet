@@ -1,6 +1,6 @@
-.appBar {
-  position: static;
-  background-color: purple;
+.navBarPageHeader {
+  /* position: static; */
+  background: purple;
 }
 
 .toolBar {
@@ -18,17 +18,17 @@
 
 
 .appTitle {
-  flex-grow: 1;
+  flex-grow: 1 ;
 }
 
 
 .navStack {
   display: flex;
-  flex-direction: row;
+  flex-direction: row ;
   gap: 1rem;
 }
 
 
 .navButton {
-  color: inherit;
+  color: white ;
 }
