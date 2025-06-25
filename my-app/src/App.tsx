@@ -1,11 +1,12 @@
 import './App.css';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Post from './Features/Post/Post';
+import HomePage from './Features/HomePage/HomePage';
 
 function App() {
   return (
     <Box className="app-container">
-      <Post text='this is my first post' ownerName='roei' comments={[{commentAuthor: 'roei', commentText:'amazing'}, {commentAuthor: 'bar', commentText:'wow!'}, {commentAuthor: 'maor', commentText:'beautiful'}]} amountOfLikes={5}></Post>
+      <HomePage/>
     </Box>
   );
 }

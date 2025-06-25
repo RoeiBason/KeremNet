@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import {Avatar, ListItemAvatar, ListItemText, ListItem, List, Box}  from '@mui/material';
+import { Avatar, ListItemAvatar, ListItemText, ListItem, List, Box } from '@mui/material';
 import CommentIcon from '@mui/icons-material/Comment';
 import { Comment } from './type';
-import './comments.css';
+import './Comments.css';
 
 interface Props {
   comments: Comment[];
@@ -12,7 +12,7 @@ const Comments: FC<Props> = ({ comments }) => {
   return (
     <Box className="comments-container">
       <List>
-        {comments.map((comment, index) => (
+        {comments.map(({ author, content }, index) => (
           <ListItem key={index} className="comment-item">
             <ListItemAvatar >
               <Avatar className="comment-avatar">
@@ -20,7 +20,7 @@ const Comments: FC<Props> = ({ comments }) => {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={`${comment.commentAuthor}: ${comment.commentText}`}
+              primary={`${author}: ${content}`}
               className="comment-text"
             />
           </ListItem>

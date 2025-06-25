@@ -4,32 +4,32 @@ import Typography from '@mui/material/Typography';
 import Comments from './Comments/Comments';
 import Likes from './Likes/Likes';
 import { Comment } from './Comments/type';
-import './post.css';
-import { getDate } from '../../Common/utils'
+import './Post.css';
 
 interface Props {
   comments: Comment[];
   amountOfLikes: number;
-  text: string;
+  content: string;
   ownerName: string;
+  date: string
 }
 
-const Post: FC<Props> = ({ text, ownerName, comments, amountOfLikes }) => {
+const Post: FC<Props> = ({ content, ownerName, comments, amountOfLikes, date }) => {
 
   return (
     <Box className="post-container">
       <Typography variant="h3" className="post-owner-name">
         {ownerName}'s Post
       </Typography>
-      <Typography className="post-text">
-        {text}
+      <Typography className="post-content">
+        {content}
       </Typography>
       <Box className="comments-section">
         <Comments comments={comments} />
       </Box>
       <Box className="post-footer">
         <Typography className="post-date">
-          {getDate()}
+          {date}
         </Typography>
         <Likes amountOfLikes={amountOfLikes} />
       </Box>
