@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Badge from '@mui/material/Badge';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import './likes.css'
+import './Likes.css'
 
 interface Props {
   amountOfLikes: number;

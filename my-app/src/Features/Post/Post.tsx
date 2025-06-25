@@ -4,17 +4,17 @@ import Typography from '@mui/material/Typography';
 import Comments from './Comments/Comments';
 import Likes from './Likes/Likes';
 import { Comment } from './Comments/type';
-import './post.css';
-import { getDate } from '../../Common/utils'
+import './Post.css';
 
 interface Props {
   comments: Comment[];
   amountOfLikes: number;
   content: string;
   ownerName: string;
+  date: string
 }
 
-const Post: FC<Props> = ({ content, ownerName, comments, amountOfLikes }) => {
+const Post: FC<Props> = ({ content, ownerName, comments, amountOfLikes, date }) => {
 
   return (
     <Box className="post-container">
@@ -29,7 +29,7 @@ const Post: FC<Props> = ({ content, ownerName, comments, amountOfLikes }) => {
       </Box>
       <Box className="post-footer">
         <Typography className="post-date">
-          {getDate()}
+          {date}
         </Typography>
         <Likes amountOfLikes={amountOfLikes} />
       </Box>
