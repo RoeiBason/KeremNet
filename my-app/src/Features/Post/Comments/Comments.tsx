@@ -20,7 +20,7 @@ const Comments: FC<Props> = ({ comments }) => {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary={`${comment.commentAuthor}: ${comment.commentText}`}
+              primary={`${comment.author}: ${comment.content}`}
               className="comment-text"
             />
           </ListItem>

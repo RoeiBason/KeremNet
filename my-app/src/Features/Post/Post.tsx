@@ -10,19 +10,19 @@ import { getDate } from '../../Common/utils'
 interface Props {
   comments: Comment[];
   amountOfLikes: number;
-  text: string;
+  content: string;
   ownerName: string;
 }
 
-const Post: FC<Props> = ({ text, ownerName, comments, amountOfLikes }) => {
+const Post: FC<Props> = ({ content, ownerName, comments, amountOfLikes }) => {
 
   return (
     <Box className="post-container">
       <Typography variant="h3" className="post-owner-name">
         {ownerName}'s Post
       </Typography>
-      <Typography className="post-text">
-        {text}
+      <Typography className="post-content">
+        {content}
       </Typography>
       <Box className="comments-section">
         <Comments comments={comments} />

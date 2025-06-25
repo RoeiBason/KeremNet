@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id":1,
+      "ownerName":"roei",
+      "content":"this is my first post",
+      "amountOfLikes":5
+    },
+    {
+      "id":2,
+      "ownerName":"bar",
+      "content":"this is a post from thailand",
+      "amountOfLikes":10
+    },
+    {
+      "id":3,
+      "ownerName":"maor",
+      "content":"i love football",
+      "amountOfLikes":12
+    }
+  ],
+  "comments":[
+    {
+      "id":1,
+      "postId":1,
+      "author":"romi",
+      "content":"wow!"
+    },
+    {
+      "id":2,
+      "postId":1,
+      "author":"maor",
+      "content":"amazing!"
+    },
+    {
+      "id":3,
+      "postId":1,
+      "author":"bar",
+      "content":"beautiful!"
+    }
+  ]
+  
+}
