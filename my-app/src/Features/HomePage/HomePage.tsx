@@ -18,7 +18,7 @@ const HomePage: FC = () => {
   }, []);
 
   return (
-    <Box className="Post-continer">
+    <Box>
       {posts && <PostList posts={posts} />}
     </Box>
   );
