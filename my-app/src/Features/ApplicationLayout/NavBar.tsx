@@ -13,7 +13,6 @@ const NavBar: FC = () => {
         </Typography>
         <Stack className='navStack' flexDirection={'row'}>
           <Button sx={{ color: '#FFFFFF' }} >Posts</Button>
-          <Button sx={{ color: '#FFFFFF' }}>Posts</Button>
         </Stack>
       </Toolbar>
     </AppBar>
