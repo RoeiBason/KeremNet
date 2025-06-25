@@ -1,0 +1,16 @@
+.toolBar {
+  display: flex;
+  padding: 0.1rem 2rem 0.1rem 2rem;
+}
+
+.logo {
+  height: 3rem;
+  margin-right: 1rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+
+.navStack {
+  gap: 1rem;
+}
