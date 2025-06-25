@@ -6,7 +6,7 @@ import HomePage from './Features/HomePage/HomePage';
 function App() {
   return (
     <Box className="app-container">
-      <HomePage></HomePage>
+      <HomePage/>
     </Box>
   );
 }

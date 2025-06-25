@@ -1,14 +1,16 @@
 import React, { useEffect, useState, FC } from "react";
 import PostList from "./PostList";
 import { Box } from "@mui/material";
+import { PostType } from "./type";
 
 
 const HomePage: FC = () => {
 
 
-  const [posts, setPosts] = useState(null)
+  const [posts, setPosts] = useState<PostType[]>()
 
-  useEffect(() => { async function fetchBlogs() {
+  useEffect(() => {
+    async function fetchBlogs() {
       let response = await fetch('http://localhost:8000/posts');
       let data = await response.json();
       setPosts(data);
@@ -17,11 +19,19 @@ const HomePage: FC = () => {
     fetchBlogs();
   }, []);
 
-  return (
-    <Box>
-      {posts && <PostList posts={posts} />}
-    </Box>
-  );
+
+  if (posts?.length === 0) {
+    return (
+      <h1>There are no post's available</h1>
+    )
+  }
+  else {
+    return (
+      <Box>{posts && <PostList posts={posts} />}
+      </Box>
+    );
+  }
+
 };
 
 export default HomePage;
