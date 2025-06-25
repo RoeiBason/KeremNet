@@ -19,18 +19,10 @@ const HomePage: FC = () => {
     fetchBlogs();
   }, []);
 
-
-  if (posts?.length === 0) {
-    return (
-      <h1>There are no post's available</h1>
-    )
-  }
-  else {
-    return (
-      <Box>{posts && <PostList posts={posts} />}
-      </Box>
-    );
-  }
+  return (
+    <Box>{posts && posts.length > 0 ? <PostList posts={posts} /> : <h1>There are no post's available</h1>}
+    </Box>
+  );
 
 };
 
