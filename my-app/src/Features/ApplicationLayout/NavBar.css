@@ -1,11 +1,5 @@
-.navBarPageHeader {
-  /* position: static; */
-  background: purple;
-}
-
 .toolBar {
   display: flex;
-  align-items: center;
   padding: 0.1rem 2rem 0.1rem 2rem;
 }
 
@@ -17,18 +11,6 @@
 }
 
 
-.appTitle {
-  flex-grow: 1 ;
-}
-
-
 .navStack {
-  display: flex;
-  flex-direction: row ;
   gap: 1rem;
-}
-
-
-.navButton {
-  color: white ;
 }
