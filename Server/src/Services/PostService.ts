@@ -67,14 +67,30 @@ class PostService implements IServerStorage<PostType[]> {
                 }
             ],
             "date": "25.06.2025"
-        }];
+        }
+        ];
+    }
+
+
+    getAllPosts(): PostType[] {
+        return this.data;
+    }
+
+    getPostById(id: string): PostType | undefined {
+        return this.data.find(post => post.id === id);
+    }
+
+    getUsersByOwnerName(ownerName: string): PostType[] {
+        return this.data.filter(post => post.ownerName === ownerName);
+    }
+
+    getUsersByDate(date: string): PostType[] {
+        return this.data.filter(post => post.date === date);
     }
 
 
 
-    find(findFunc: Function): PostType[] {
-        return this.data.filter((object) => findFunc(object));
-    }
+
 }
 
 export { PostService };
