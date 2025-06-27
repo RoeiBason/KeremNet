@@ -1,7 +1,7 @@
 import { Comment } from '../Post/Comments/type';
 
 export interface PostType {
-    id:number;
+    id:string;
     comments: Comment[];
     amountOfLikes: number;
     content: string;
